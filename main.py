@@ -1,12 +1,12 @@
 import pandas as pd
 from tkinter import *
+from file_reader import FileReader
 from grid import GenerateGrid
 from scrollable_frame import ScrollableFrame
 
-# Read csv file
-sales = pd.read_csv(
-    '/home/fredrik/PycharmProjects/GridDisplay/venv/sales_data.csv',
-    parse_dates=['Date'])
+# Read file
+file_reader = FileReader()
+sales = file_reader.pandas_file_type('c:/xampp/htdocs/Grid-Display/sales_data.csv')
 
 # Create main frame
 main_frame = ScrollableFrame()
@@ -23,7 +23,7 @@ res = data.to_records(index=TRUE)
 data_records = pd.DataFrame(res.ravel())
 
 # Create grid
-
 grid1 = GenerateGrid(data_records, second_frame, header_array)
 grid1.generate()
+
 mainloop()
