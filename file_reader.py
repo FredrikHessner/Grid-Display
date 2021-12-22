@@ -14,7 +14,4 @@ class FileReader:
         elif len(args) == 3:
             return pd.read_sql(args[1],args[2])
 
- #   def pandas_file_type(self,database, type):
-  #      return pd.read_sql_table(database, type)
-
 
