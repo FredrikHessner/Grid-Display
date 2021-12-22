@@ -18,7 +18,11 @@ class GenerateGrid:
         rows.append(cols)
 
         # Insert data into table
-        for i in range(len(self.data_records)):
+        grid_column = len(self.data_records)
+        # Restricts grids that are too large.
+        if len(self.data_records) > 100:
+            grid_column = 100
+        for i in range(grid_column):
             cols = []
             for j in range(len(self.data_records.columns)):
                 e = Entry(self.second_frame, relief=GROOVE)
