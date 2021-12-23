@@ -1,6 +1,6 @@
 import pandas as pd
 from tkinter import *
-from file_reader import FileReader
+from src.file_reader import FileReader
 from src.grid import GenerateGrid
 from src.scrollable_frame import ScrollableFrame
 
