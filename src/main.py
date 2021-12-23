@@ -1,12 +1,12 @@
 import pandas as pd
 from tkinter import *
 from file_reader import FileReader
-from grid import GenerateGrid
-from scrollable_frame import ScrollableFrame
+from src.grid import GenerateGrid
+from src.scrollable_frame import ScrollableFrame
 
 # Read file
 file_reader = FileReader()
-sales = file_reader.pandas_file_type('c:/xampp/htdocs/Grid-Display/sales_data.csv')
+sales = file_reader.pandas_file_type('c:/xampp/htdocs/grid_display/ghg-emissions.csv')
 
 # Create main frame
 main_frame = ScrollableFrame()
